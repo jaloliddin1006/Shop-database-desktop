@@ -1,0 +1,38 @@
+{
+	"QCustomSlideMenu": [{
+		"name": "body_left_frame",
+		"defaultSize":[{
+			"width": 200,
+			"height": "auto"
+		}],
+		"collapsedSize":[{
+			"width": 0,
+			"height": 0
+		}],
+		"expandedSize": [{
+			"width": 200,
+			"height": "auto"
+		}],
+		"toggleButton":[{
+			"buttonName": "menu_open_close_btn",
+			"icons": [{
+				"whenMenuIsCollapsed": ":/icons/icons/align-left.svg",
+				"whenMenuIsExpanded": ":/icons/icons/chevrons-left.svg"
+			}]
+			
+			
+		}],
+		"menuTransitionAnimation": [{
+			"animationDuration":500,
+			"animationEasingCurve": "Linear"
+		}],
+		"menuContainerStyle":[{
+			"whenMenuIsCollapsed": [
+				"border: 2px solid transparent"
+			],
+			"whenMenuIsExpanded": [
+				"border: 2px solid #040f13; background-color: #040f13 "
+			]
+		}]
+	}]
+}

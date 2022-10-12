@@ -1,0 +1,1528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>844</width>
+    <height>534</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>User's Page</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/icons/icons/user.svg</normaloff>:/icons/icons/user.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+border:none;
+background-color: transparent;
+color:#fff;
+}
+#centralwidget{
+background-color:#040f13;
+border-color:5px;
+}
+
+#close_window_btn:hover, #minimize_window_btn:hover, #resize_window_btn:hover,#info_btn:hover{
+padding-right:3px;
+padding-top:2px;
+} 
+
+#close_window_btn:pressed, #minimize_window_btn:pressed, #resize_window_btn:pressed,#info_btn:pressed{
+padding-left:3px;
+padding-bottom:2px;
+} </string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item alignment="Qt::AlignTop">
+     <widget class="QFrame" name="header_frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(175, 251, 255, 55);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QFrame" name="menu_open_close_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignTop">
+           <widget class="QPushButton" name="menu_open_close_btn">
+            <property name="font">
+             <font>
+              <family>MS PMincho</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>MENU</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icons/icons/align-left.svg</normaloff>:/icons/icons/align-left.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>32</width>
+              <height>32</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignVCenter">
+        <widget class="QFrame" name="name_frame">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignTop">
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <family>MS PMincho</family>
+              <pointsize>19</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>User's Pages</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignRight|Qt::AlignTop">
+        <widget class="QFrame" name="components_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="minimize_window_btn">
+            <property name="maximumSize">
+             <size>
+              <width>28</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Music</family>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icons/icons/minus.svg</normaloff>:/icons/icons/minus.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string>Esc</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="resize_window_btn">
+            <property name="maximumSize">
+             <size>
+              <width>24</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Music</family>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icons/icons/maximize-2.svg</normaloff>:/icons/icons/maximize-2.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string>Esc</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="close_window_btn">
+            <property name="maximumSize">
+             <size>
+              <width>28</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Music</family>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icons/icons/x.svg</normaloff>:/icons/icons/x.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string>Esc</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="main_body_frame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(100, 15, 28, 155);
+border-radius:20px ;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <property name="leftMargin">
+        <number>9</number>
+       </property>
+       <item alignment="Qt::AlignLeft">
+        <widget class="QFrame" name="main_body_left_frame">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(152, 255, 164);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item alignment="Qt::AlignTop">
+           <widget class="QFrame" name="info_top_frame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Narkisim</family>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(167, 144, 133, 155);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="label_3">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap resource="resource.qrc">:/icons/icons/ICT_academy_02.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_9">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_10">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_7">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="main_body_right_frame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(149, 155, 103, 155);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item alignment="Qt::AlignTop">
+           <widget class="QFrame" name="main_body_menu_frame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+padding-right:5px;
+padding-top:3px;
+	color: rgba(105, 211, 188, 155);
+}
+
+
+QPushButton:pressed{
+padding-left:5px;
+padding-bottom:3px;
+	color: rgba(255, 181, 238, 255);
+}
+
+*{
+background-color: rgba(158, 253, 155, 155);
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <property name="spacing">
+              <number>17</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>11</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>7</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton_6">
+               <property name="font">
+                <font>
+                 <family>Narkisim</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Bazadagi Mahsulotlar</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_8">
+               <property name="font">
+                <font>
+                 <family>Narkisim</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>menu 2</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_9">
+               <property name="font">
+                <font>
+                 <family>Narkisim</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>menu 3</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_10">
+               <property name="font">
+                <font>
+                 <family>Narkisim</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>menu 4</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_12">
+               <property name="font">
+                <font>
+                 <family>Narkisim</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>menu 5</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_14">
+               <property name="font">
+                <font>
+                 <family>Narkisim</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>menu 6</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_13">
+               <property name="font">
+                <font>
+                 <family>Narkisim</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>menu 7</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_11">
+               <property name="font">
+                <font>
+                 <family>Narkisim</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>menu 8</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_15">
+               <property name="font">
+                <font>
+                 <family>Narkisim</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>menu 9</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="main_body_right_frame_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(148, 255, 140, 55);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <widget class="QStackedWidget" name="stackedWidget">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="currentIndex">
+                <number>2</number>
+               </property>
+               <widget class="QWidget" name="page">
+                <widget class="QLabel" name="label_48">
+                 <property name="geometry">
+                  <rect>
+                   <x>60</x>
+                   <y>50</y>
+                   <width>279</width>
+                   <height>37</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>23</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Widget 3</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_3">
+                <widget class="QLabel" name="label_13">
+                 <property name="geometry">
+                  <rect>
+                   <x>110</x>
+                   <y>60</y>
+                   <width>121</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>23</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Widget 1</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_4">
+                <layout class="QVBoxLayout" name="verticalLayout_10">
+                 <item>
+                  <widget class="QFrame" name="frame_2">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_7">
+                    <item>
+                     <widget class="QPushButton" name="pushButton">
+                      <property name="text">
+                       <string>list</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pushButton_2">
+                      <property name="text">
+                       <string>diagramma</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_3">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_11">
+                    <item>
+                     <widget class="QStackedWidget" name="stackedWidget_2">
+                      <property name="currentIndex">
+                       <number>0</number>
+                      </property>
+                      <widget class="QWidget" name="page_5">
+                       <layout class="QVBoxLayout" name="verticalLayout_15">
+                        <item>
+                         <widget class="QScrollArea" name="scrollArea">
+                          <property name="widgetResizable">
+                           <bool>true</bool>
+                          </property>
+                          <widget class="QWidget" name="scrollAreaWidgetContents">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>0</y>
+                             <width>309</width>
+                             <height>657</height>
+                            </rect>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_12">
+                            <item>
+                             <widget class="QLabel" name="label_14">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Bazadagi mahsulotlar</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_16">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_17">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_18">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_19">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_20">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_21">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_22">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_29">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_23">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_24">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_25">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_28">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_27">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_26">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                      <widget class="QWidget" name="page_6">
+                       <layout class="QVBoxLayout" name="verticalLayout_14">
+                        <item>
+                         <widget class="QScrollArea" name="scrollArea_2">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>7</pointsize>
+                           </font>
+                          </property>
+                          <property name="widgetResizable">
+                           <bool>true</bool>
+                          </property>
+                          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>-265</y>
+                             <width>326</width>
+                             <height>967</height>
+                            </rect>
+                           </property>
+                           <layout class="QFormLayout" name="formLayout">
+                            <item row="0" column="0" colspan="2">
+                             <widget class="QLabel" name="label_15">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="5" column="0" colspan="2">
+                             <widget class="QLabel" name="label_35">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="7" column="1">
+                             <widget class="QLabel" name="label_34">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="10" column="0" colspan="2">
+                             <widget class="QLabel" name="label_33">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="12" column="1">
+                             <widget class="QLabel" name="label_32">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="17" column="1">
+                             <widget class="QLabel" name="label_43">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="20" column="0" colspan="2">
+                             <widget class="QLabel" name="label_42">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="22" column="1">
+                             <widget class="QLabel" name="label_41">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="25" column="0" colspan="2">
+                             <widget class="QLabel" name="label_40">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="27" column="1">
+                             <widget class="QLabel" name="label_39">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="30" column="0">
+                             <widget class="QLabel" name="label_38">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="32" column="1">
+                             <widget class="QLabel" name="label_36">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="36" column="1">
+                             <widget class="QLabel" name="label_47">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="41" column="0" colspan="2">
+                             <widget class="QLabel" name="label_37">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="1">
+                             <widget class="QLabel" name="label_30">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="35" column="0">
+                             <widget class="QLabel" name="label_45">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="39" column="0">
+                             <widget class="QLabel" name="label_44">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="40" column="1">
+                             <widget class="QLabel" name="label_46">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Widget 4/2</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="15" column="0" colspan="2">
+                             <widget class="QLabel" name="label_31">
+                              <property name="font">
+                               <font>
+                                <pointsize>23</pointsize>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>Bazadagi mahsulotlar</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="page_2">
+                <widget class="QLabel" name="label_12">
+                 <property name="geometry">
+                  <rect>
+                   <x>120</x>
+                   <y>40</y>
+                   <width>121</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>23</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Widget 2</string>
+                 </property>
+                </widget>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="footer_frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(167, 255, 249, 55);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignLeft|Qt::AlignBottom">
+        <widget class="QFrame" name="version_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignBottom">
+           <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Version 1.0 | CopyRight</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignBottom">
+        <widget class="QFrame" name="footer_center_frame">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignRight">
+        <widget class="QFrame" name="info_btn_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignRight">
+           <widget class="QPushButton" name="info_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>15</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>?</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignBottom">
+        <widget class="QFrame" name="grip_frame">
+         <property name="minimumSize">
+          <size>
+           <width>10</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>10</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+  <include location="C:/Users/Jaloliddin/.designer/backup/resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
